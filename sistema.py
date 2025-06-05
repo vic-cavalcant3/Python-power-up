@@ -3,7 +3,7 @@ import pyautogui
 import time
 import pandas
 
-pyautogui.PAUSE = 1.5
+pyautogui.PAUSE = 1
 # Abrindo o navegador
 pyautogui.press("win")
 pyautogui.write("chrome")
@@ -15,9 +15,9 @@ pyautogui.press("enter")
 time.sleep(2)
 
 # Fazendo o login no site
-pyautogui.click(x=604, y=400)
+pyautogui.click(x=1206 , y=589)
 pyautogui.write("victorrocha0223@gmail.com")
-pyautogui.click(x=400, y=495)
+pyautogui.press("tab")
 pyautogui.write("12345")
 pyautogui.press("enter")
 time.sleep(0.2)
@@ -29,7 +29,7 @@ tabela = pandas.read_csv("./src/alunos_30.csv")
 print(tabela)
 
 for linha in tabela.index:
-    pyautogui.click(x=190, y=275)
+    pyautogui.click(x=1038, y=311)
 
     nome = tabela.loc[linha, "nome"]
     pyautogui.write(nome)
